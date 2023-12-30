@@ -16,10 +16,10 @@ export default function GiftTips() {
 
     return (
         <div className="flex flex-col items-center justify-center w-screen min-h-screen">
-            <div className="p-6">
+            <div className="p-3">
                 <h1 className="text-center text-2xl tracking-widest">GIFT TIPS</h1>
             </div>
-            <div className="pb-6 max-w-sm">
+            <div className="p-3 max-w-lg">
                 <p>
                     We greatly appreciate any gifts that you feel led to give to us.
                     We have listed our registries below along with some other gifts that we'd love!
@@ -42,7 +42,7 @@ export default function GiftTips() {
                     ))}
                 </div>
                 <div>
-                    <div className="justify-end items-end md:flex">
+                    <div className="justify-end items-end flex">
                         <Image src="./wedding_asset_canva.svg" width={125} height={125} />
                     </div>
                 </div>
