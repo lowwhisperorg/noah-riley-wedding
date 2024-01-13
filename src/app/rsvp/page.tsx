@@ -16,7 +16,6 @@ export default function RSVP() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isError, setIsError] = useState(false);
     const [error, setError] = useState("");
-    const [requestType, setRequestType] = useState("website");
 
     const [people, setPeople] = useState(0);
     const [inputValues, setInputValues] = useState(Array.from({ length: people }, () => ''));

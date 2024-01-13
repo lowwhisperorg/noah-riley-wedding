@@ -5,6 +5,7 @@ import LandingPage from './components/LandingPage/LandingPage'
 import EventDetails from './components/EventDetails/EventDetails'
 import GiftTips from './components/GiftTips/GiftTips'
 import Note from './components/Note/Note'
+import Photos from './components/Photos/Photos'
 
 
 export default function Home() {
@@ -15,7 +16,8 @@ export default function Home() {
       <LandingPage />
       <EventDetails />
       <GiftTips />
-      <Note />
+      {/* <Note /> */}
+      <Photos />
       </main>
       
     </NextUIProvider>
