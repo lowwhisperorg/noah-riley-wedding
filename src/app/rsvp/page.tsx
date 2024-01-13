@@ -1,19 +1,15 @@
 "use client"
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
     Button,
     Card,
     CardBody,
     CardHeader,
     NextUIProvider,
-    Radio,
-    RadioGroup,
-    Select,
-    SelectItem
 } from "@nextui-org/react";
-import {Input} from "@nextui-org/input";
-import {isError} from "node:util";
+import { Input } from "@nextui-org/input";
 import AddIcon from '@mui/icons-material/Add';
+import ClearIcon from '@mui/icons-material/Clear';
 
 export default function RSVP() {
 
@@ -23,7 +19,9 @@ export default function RSVP() {
     const [requestType, setRequestType] = useState("website");
 
     const [people, setPeople] = useState(0);
-    const [inputValues, setInputValues] = useState(Array.from({length: people}, () => ''));
+    const [inputValues, setInputValues] = useState(Array.from({ length: people }, () => ''));
+
+    const maxGuests = 5
 
 
     const handlePeopleChange = () => {
@@ -41,7 +39,7 @@ export default function RSVP() {
     };
 
     const handleChange = (e: { target: { value: any; }; }, index: number) => {
-        const {value} = e.target;
+        const { value } = e.target;
         setInputValues((prevValues) => {
             const newValues = [...prevValues];
             newValues[index] = value;
@@ -79,44 +77,48 @@ export default function RSVP() {
                             <h1><b>Wedding RSVP</b></h1>
                         </CardHeader>
                         <CardBody className="font-serif">
-                            <p>
+                            <p className="mb-4">
                                 Please fill out the form below to RSVP.
                             </p>
                             {!isError && !isSubmitted ?
-                                <form className="p-6" method="POST" name="contact" data-netlify="true"
-                                      onSubmit={handleSubmit}>
-                                    <input type="hidden" name="form-name" value="rsvp"/>
-                                    <Input className={""} isRequired type="text" name="name" label="Full Name"
-                                           id="name"/>
+                                <form className="p-6 shadow-md rounded-md" method="POST" name="rsvp" data-netlify="true"
+                                    onSubmit={handleSubmit}>
+                                    <input type="hidden" name="form-name" value="rsvp" />
+                                    <Input className={"mb-4"} isRequired type="text" name="name" label="Full Name"
+                                        id="name" />
                                     <p>We will be doing a pot luck. If you plan on bringing a dish, please list it
                                         below:</p>
-                                    <Input type="text" name="dish" label="Dish Name" id="dish"/>
+                                    <Input className={"mb-4"} type="text" name="dish" label="Dish Name" id="dish" />
 
-                                    <p>Please fill out how many people you plan to bring.</p>
                                     <div>
-                                        <p>Additional Guests: {people}/5</p>
+                                        <p>Additional Guests: {people}/{maxGuests}</p>
 
                                         {people > 0 ? inputValues.map((value, index) => (
-                                            <div key={index} className={"flex flex-row"}>
-                                                <p>Guest {index + 1}</p>
+                                            <div key={index} className={"flex flex-row justify-center items-center pb-3"}>
+                                                <p className="w-28 text-sm">Guest {index + 1}</p>
                                                 <Input
+                                                    isRequired
                                                     type="text"
                                                     value={value}
                                                     label={"Full Name"}
+                                                    className="mr-3"
+                                                    id={String(index + 1)}
+                                                    name={"Guest " + String(index + 1)}
                                                     onChange={(e) => handleChange(e, index)}
                                                 />
-                                                <Button className="m-2" color={"secondary"} onClick={() => handleRemovePerson(index)}>
-                                                    Remove
+                                                <Button isIconOnly size={"sm"} className="flex" color={"secondary"} onClick={() => handleRemovePerson(index)}>
+                                                    <ClearIcon />
                                                 </Button>
 
                                             </div>
                                         )) : <></>}
+
                                         <div className={"flex mt-4 justify-end items-center"}>
                                             <Button
-                                                    className={"m-2"}
-                                                    color={"primary"} isDisabled={people > 4 ? true : false}
-                                                    onClick={handlePeopleChange}
-                                                    endContent={<AddIcon/>}
+                                                className={"m-2"}
+                                                color={"primary"} isDisabled={people > maxGuests - 1 ? true : false}
+                                                onClick={handlePeopleChange}
+                                                endContent={<AddIcon />}
                                             >Add Guest</Button>
                                         </div>
 
@@ -137,7 +139,7 @@ export default function RSVP() {
                                 <center><p className="p-6">There was an error submitting your form. Please try again
                                     later.</p></center>}
                             {isSubmitted &&
-                                <center><p className="p-6">Thank you! I will get back to you soon.</p></center>}
+                                <center><p className="p-6">Thank you for your RSVP! We look forward to seeing you!</p></center>}
                         </CardBody>
                     </Card>
                 </div>

@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import LandingPage from './components/LandingPage/LandingPage'
 import EventDetails from './components/EventDetails/EventDetails'
 import GiftTips from './components/GiftTips/GiftTips'
+import Note from './components/Note/Note'
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <LandingPage />
       <EventDetails />
       <GiftTips />
+      <Note />
       </main>
       
     </NextUIProvider>
