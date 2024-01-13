@@ -4,7 +4,7 @@ import { Image, Link } from "@nextui-org/react";
 
 export default function EventDetails() {
     const shower = ["DATE: March 9th, 2024", "TIME: 2:00 p.m.", "LOCATION: Hendersonville Church", "1705 Spartanburg Hwy Hendersonville, NC"];
-    const wedding = ["Private Ceremony.", "See invitation for details."];
+    const wedding = ["Private Ceremony"];
 
     return (
         <div id="EVENT DETAILS" className="flex flex-row items-center justify-center w-screen min-h-screen">
