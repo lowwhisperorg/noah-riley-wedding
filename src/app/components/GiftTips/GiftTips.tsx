@@ -22,7 +22,7 @@ export default function GiftTips() {
             <div className="p-3 max-w-lg">
                 <p>
                     We greatly appreciate any gifts that you feel led to give to us.
-                    We have listed our registries below along with some other gifts that we'd love!
+                    We have listed our registries below along with some other gifts that we&apos;d love!
                 </p>
             </div>
 
@@ -43,7 +43,7 @@ export default function GiftTips() {
                 </div>
                 <div>
                     <div className="justify-end items-end flex">
-                        <Image src="./wedding_asset_canva.svg" width={125} height={125} />
+                        <Image alt="Wedding Flowers" src="./wedding_asset_canva.svg" width={125} height={125} />
                     </div>
                 </div>
             </div>

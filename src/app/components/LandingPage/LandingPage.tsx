@@ -9,16 +9,16 @@ export default function LandingPage() {
     return (<>
         <div className="flex flex-col md:flex-row justify-center md:justify-between  w-screen min-h-[calc(100vh-65px)]"> {/**/}
             <div className="hidden justify-end items-end md:flex">
-                <Image src="./wedding_asset_4.png" width={500} height={500} />
+                <Image alt="Wedding Flowers" src="./wedding_asset_4.png" width={500} height={500} />
             </div>
 
 
             <div className="flex items-center justify-center  flex-col p-3">
                 <div className="flex-col flex items-center md:items-start">
-                    <h1 className="text-center text-2xl tracking-widest pb-6">WE'RE GETTING MARRIED!</h1>
+                    <h1 className="text-center text-2xl tracking-widest pb-6">WE&apos;RE GETTING MARRIED!</h1>
 
                     {links.map((link) => (
-                        <Link href={"#" + link} underline="always" color="foreground" className="pb-6 text-xl">
+                        <Link href={"#" + link} key={link} underline="always" color="foreground" className="pb-6 text-xl">
                             {link}
                         </Link>
                     ))}
@@ -26,7 +26,7 @@ export default function LandingPage() {
                 </div>
             </div>
             <div className="justify-end items-end md:flex">
-                <Image src="./noahriley.jpeg" width={500} height={500} />
+                <Image alt="A picture of Noah and Riley" src="./noahriley.jpeg" width={500} height={500} />
             </div>
         </div>
 

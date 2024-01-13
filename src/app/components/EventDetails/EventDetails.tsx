@@ -21,7 +21,7 @@ export default function EventDetails() {
                         <h2 className="text-xl pb-6">THE SHOWER</h2>
 
                         {shower.map((item) => (
-                            <p className="text-lg">{item}</p>
+                            <p key={item} className="text-lg">{item}</p>
                         ))}
 
                         <p className="text-lg" >See registry in <Link href="#GIFT TIPS" underline="always" color="foreground" >Gift Tips</Link></p>
@@ -29,14 +29,14 @@ export default function EventDetails() {
                     <div className="p-3">
                         <h2 className="text-xl pb-6">THE WEDDING</h2>
                         {wedding.map((item) => (
-                            <p className="text-lg">{item}</p>
+                            <p key={item} className="text-lg">{item}</p>
                         ))}
                     </div>
                 </div>
 
             </div>
             <div className="hidden justify-end md:flex items-end">
-                <Image src="./wedding_asset_canva_3.svg" width={500} height={500} />
+                <Image alt="Wedding Flowers" src="./wedding_asset_canva_3.svg" width={500} height={500} />
             </div>
 
         </div>
