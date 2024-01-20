@@ -21,7 +21,7 @@ export default function Photos() {
             <div>
                 <h1 className="text-center pb-6 text-2xl tracking-widest">PHOTOS</h1>
             </div>
-            <div className="grid grid-cols-1 flex justify-center lg:grid-cols-3">
+            <div className="grid grid-cols-1 justify-center lg:grid-cols-3">
                 {image_urls.map((url, i) => (
                     <div key={i} className="flex justify-center items-center p-2">
                         <Image alt="A picture of Noah and Riley" fallbackSrc={"odie_bw_600.png"} src={url} width={500} height={500} />

@@ -15,11 +15,11 @@ export default function GiftTips() {
     }
 
     return (
-        <div id="GIFT TIPS" className="flex flex-col items-center justify-center w-screen min-h-screen">
+        <div id="GIFT TIPS" className="flex p-14 flex-col items-center justify-center w-screen min-h-screen">
             <div>
                 <h1 className="text-center pb-6 text-2xl tracking-widest">GIFT TIPS</h1>
             </div>
-            <div className="p-3 max-w-xl text-xl">
+            <div className="p-3 max-w-xl text-xl text-justify">
                 <p>
                     We greatly appreciate any gifts that you feel led to give to us.
                     We have listed our registries below along with some other gifts that we&apos;d love!
@@ -43,13 +43,9 @@ export default function GiftTips() {
                         <Link underline="always" color="foreground" href={cards[key]} className="text-lg" key={key}>{key}</Link>
                     ))}
                 </div>
-                <div>
-                    <div className="justify-end items-end md:hidden sm:flex">
-                        <Image alt="Wedding Flowers" src="./wedding_asset_canva.svg" width={125} height={125} />
-                    </div>
-                </div>
+
             </div>
-            <div className="justify-end items-end hidden md:flex">
+            <div className="justify-end items-end flex">
                         <Image alt="Wedding Flowers" src="./wedding_asset_canva.svg" width={300} height={300} />
             </div>
         </div>

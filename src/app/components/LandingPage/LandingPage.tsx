@@ -4,10 +4,10 @@ import React from "react";
 
 export default function LandingPage() {
 
-    const links = ["EVENT DETAILS", "GIFT TIPS", "A NOTE FROM US"]
+    const links = ["EVENT DETAILS", "GIFT TIPS", "A NOTE FROM US", "PHOTOS"]
 
     return (<>
-        <div className="flex flex-col md:flex-row justify-center md:justify-between  w-screen min-h-[calc(100vh-65px)]"> {/**/}
+        <div className="flex flex-col md:flex-row justify-center md:justify-between  w-screen min-h-[calc(100vh-128px)]"> {/**/}
             <div className="hidden justify-end items-end md:flex">
                 <Image alt="Wedding Flowers" src="./wedding_asset_4.png" width={500} height={500} />
             </div>
