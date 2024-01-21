@@ -4,6 +4,7 @@ import { Image, Link } from "@nextui-org/react";
 
 export default function EventDetails() {
   const shower = [
+    "Open Invitation",
     "DATE: March 9th, 2024",
     "TIME: 2:00 p.m.",
     "LOCATION: Hendersonville Church",
