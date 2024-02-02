@@ -21,7 +21,7 @@ export default function RSVP() {
     Array.from({ length: people }, () => "")
   );
 
-  const maxGuests = 5;
+  const maxGuests = 6;
 
   const handlePeopleChange = () => {
     setPeople(people + 1);
@@ -109,7 +109,7 @@ export default function RSVP() {
 
                   <div>
                     <p>
-                      Additional Guests: {people}/{maxGuests}
+                      Additional Guests (Kids are welcomed): {people}/{maxGuests}
                     </p>
 
                     {people > 0 ? (
@@ -182,7 +182,7 @@ export default function RSVP() {
               {isSubmitted && (
                 <center>
                   <p className="p-6">
-                    Thank you for your RSVP! We look forward to seeing you!
+                    Thank you for your RSVP! We look forward to seeing you! You can view our registry at <Link href="/" underline="always" color="foreground">www.noahandriley.me</Link>
                   </p>
                 </center>
               )}
