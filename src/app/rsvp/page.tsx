@@ -110,7 +110,7 @@ export default function RSVP() {
 
                   <div>
                     <p>
-                      Additional Guests (Kids are welcomed): {people}/{maxGuests}
+                      Additional Guests (kids are welcomed): {people}/{maxGuests}
                     </p>
 
                     {people > 0 ? (
