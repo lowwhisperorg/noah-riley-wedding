@@ -17,7 +17,19 @@ export default function EventDetails() {
       id="EVENT DETAILS"
       className="flex flex-row items-center justify-center w-screen md:min-h-screen md:pt-0 pt-6"
     >
+
+
       <div className="flex items-center flex-col p-3">
+        
+      <div className="pb-6 md:hidden">
+        <Image
+          alt="Floral Divider"
+          src="./divider.png"
+          width={500}
+          height={500}
+        />
+      </div>
+
         <div className="flex-col flex">
           <h1 className="text-center text-2xl tracking-widest pb-6">
             EVENT DETAILS
@@ -50,8 +62,18 @@ export default function EventDetails() {
             ))}
           </div>
         </div>
+
+        <div className="pb-6 md:hidden rotate-180">
+        <Image
+          alt="Wedding Flowers"
+          src="./divider.png"
+          width={500}
+          height={500}
+        />
       </div>
-      <div className="hidden justify-end md:flex items-end">
+
+      </div>
+      <div className="hidden justify-end md:flex items-end ">
         <Image
           alt="Wedding Flowers"
           src="./wedding_asset_canva_3.svg"
