@@ -6,13 +6,13 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center md:justify-between  w-screen min-h-[calc(100vh-128px)]">
+      <div className="flex flex-col md:flex-row justify-center md:justify-between md:min-h-[calc(100vh-128px)] overflow-x-hidden">
         <div className="hidden justify-end items-end md:flex">
           <Image
             alt="Wedding Flowers"
             src="./wedding_asset_4.png"
-            width={500}
-            height={500}
+            width={450}
+            height={450}
           />
         </div>
 
@@ -39,8 +39,8 @@ export default function LandingPage() {
           <Image
             alt="A picture of Noah and Riley"
             src="./noahriley.jpeg"
-            width={500}
-            height={500}
+            width={450}
+            height={450}
           />
         </div>
       </div>

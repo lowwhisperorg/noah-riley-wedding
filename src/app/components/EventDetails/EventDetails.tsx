@@ -15,7 +15,7 @@ export default function EventDetails() {
   return (
     <div
       id="EVENT DETAILS"
-      className="flex flex-row items-center justify-center w-screen min-h-screen"
+      className="flex flex-row items-center justify-center w-screen md:min-h-screen md:pt-0 pt-6"
     >
       <div className="flex items-center flex-col p-3">
         <div className="flex-col flex">

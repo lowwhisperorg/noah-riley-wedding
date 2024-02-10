@@ -18,7 +18,7 @@ export default function GiftTips() {
   return (
     <div
       id="GIFT TIPS"
-      className="flex p-14 flex-col items-center justify-center w-screen min-h-screen"
+      className="flex p-14 flex-col items-center justify-center w-screen md:min-h-screen"
     >
       <div>
         <h1 className="text-center pb-6 text-2xl tracking-widest">GIFT TIPS</h1>
@@ -71,8 +71,8 @@ export default function GiftTips() {
         <Image
           alt="Wedding Flowers"
           src="./wedding_asset_canva.svg"
-          width={300}
-          height={300}
+          width={250}
+          height={250}
         />
       </div>
     </div>

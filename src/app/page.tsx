@@ -10,7 +10,7 @@ import Photos from "./components/Photos/Photos";
 export default function Home() {
   return (
     <NextUIProvider>
-      <main className="light bg-background text-foreground font-serif">
+      <main className="light bg-background text-foreground font-serif overflow-x-hidden">
         <Header />
         <LandingPage />
         <EventDetails />

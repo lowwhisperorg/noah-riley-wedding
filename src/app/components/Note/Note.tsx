@@ -14,7 +14,7 @@ export default function Note() {
   return (
     <div
       id="A NOTE FROM US"
-      className="flex flex-col items-center justify-center w-screen min-h-screen"
+      className="flex flex-col items-center justify-center w-screen md:min-h-screen"
     >
       <div className="hidden grid-cols-2 shadow-xl rounded-lg max-w-screen-lg md:grid">
         <div className="text-justify shadow-inner p-24 flex-1">

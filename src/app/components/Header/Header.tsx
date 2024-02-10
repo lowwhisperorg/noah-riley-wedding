@@ -38,10 +38,9 @@ export default function Header() {
       </Navbar>
       <Navbar
         id="toHome"
-        position="sticky"
         isBlurred={false}
         className={`flex justify-end bg-transparent transition-opacity duration-100 ease-in  ${
-          isAtTop ? "opacity-0" : "opacity-100"
+          isAtTop ? "opacity-0" : "opacity-0"
         }`}
       >
         <NavbarBrand></NavbarBrand>
