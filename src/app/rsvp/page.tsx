@@ -98,7 +98,7 @@ export default function RSVP() {
                   />
                   <p>
                     We will be doing a pot luck. If you plan on bringing a dish,
-                    please list it below:
+                    please list it below (no alcohol, please!)
                   </p>
                   <Input
                     className={"mb-4"}
